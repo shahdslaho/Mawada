@@ -1,0 +1,79 @@
+/* الحاوية الرئيسية لصفحة تفاصيل اللعبة */
+.container {
+    background: linear-gradient(to right, #050040, #83007e);
+    opacity: 0.95;
+    border-radius: 1rem;
+    box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2);
+    margin: 120px auto;
+    max-width: 1200px; 
+    width: 92%;       
+    padding: 2.5rem;     
+}
+
+/* تنظيم محتوى الصفحة */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    position: relative;
+}
+
+/* القسم الأيسر الذي يحتوي على صورة اللعبة */
+.leftSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* تنسيق صورة اللعبة الرئيسية */
+.gameImage {
+    width: 100%;
+    max-width: 450px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* تأثير التكبير عند تمرير المؤشر على الصورة */
+.gameImage:hover {
+    transform: scale(1.02);
+}
+
+/* قسم المنصات التي تدعم اللعبة */
+.platformSection {
+    margin: 1.2rem 0;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+/* تنظيم علامات المنصات */
+.platformTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+/* تنسيق علامة المنصة الواحدة */
+.platformTag {
+    background: linear-gradient(135deg, rgba(114, 0, 101, 0.6), rgba(109, 0, 153, 0.6));
+    padding: 0.6rem 1.2rem;
+    border-radius: 1.5rem;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+/* تأثير الارتفاع عند تمرير المؤشر على علامة المنصة */
+.platformTag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(114, 0, 101, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}

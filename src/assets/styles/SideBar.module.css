@@ -1,0 +1,144 @@
+
+/* الشريط الجانبي الرئيسي - مخفي افتراضياً */
+.sidebarApp {
+  position: fixed;
+  left: -260px; 
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: var(--sidebar-bg);
+  color: white;
+  transition: left 0.3s ease-in-out;
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* حالة الشريط الجانبي عند فتحه */
+.sidebarApp.open {
+  left: 0;
+}
+
+/* زر فتح القائمة */
+.menuButton {
+  position: fixed;
+  left: 10px;
+  top: 15px;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  z-index: 1001;  /* Added z-index to ensure button stays on top */
+}
+
+/* زر إغلاق الشريط الجانبي */
+.closeBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* موضع زر القائمة عند فتح الشريط الجانبي */
+.sidebarApp.open .menuButton {
+  left: 270px;
+}
+
+/* المحتوى الرئيسي للصفحة */
+.content {
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* إزاحة المحتوى عند فتح الشريط الجانبي */
+.content.shifted {
+  margin-left: 250px;
+}
+
+/* أزرار التصنيفات في الشريط الجانبي */
+.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 80px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  color: var(--text-color);
+  font-weight: bold;
+  margin-top: 10px;
+  background: var(--navbar-bg);
+}
+
+/* تأثير التحويم على الأزرار */
+.button:hover {
+  background-color: var(--button-hover-bg);
+  transform: translateY(-2px);
+}
+
+/* تنسيق الأزرار في الوضع الداكن */
+html[data-theme="dark"] .button {
+  background: var(--navbar-bg);
+}
+
+/* تأثير التحويم على الأزرار في الوضع الداكن */
+html[data-theme="dark"] .button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* صور التصنيفات */
+.img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* تأثير التحويم على الصور */
+.img:hover {
+  transform: scale(1.05);
+}
+
+/* نص التصنيفات */
+.text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: inherit;
+  transition: color 0.3s ease-in-out;
+  margin-left: 10px;
+}
+
+/* لون النص في الوضع الفاتح */
+html[data-theme="light"] .text {
+  color: var(--text-color);
+}
+
+/* لون النص في الوضع الداكن */
+html[data-theme="dark"] .text {
+  color: var(--text-color);
+}
+
+/* قائمة التصنيفات */
+.list {
+  width: 100%;
+  padding: 10px;
+  background: var(--list-bg);
+  border-radius: 8px;
+  transition: background 0.1s ease-in-out;
+}
+
+/* خلفية القائمة في الوضع الفاتح */
+html[data-theme="light"] .list {
+  background: #ffffff;
+}

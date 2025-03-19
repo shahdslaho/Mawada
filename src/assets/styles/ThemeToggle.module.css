@@ -1,0 +1,21 @@
+
+.themeToggleContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+
+.icon {
+  cursor: pointer;
+  font-size: 1.8rem; 
+  transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+  opacity: 0.5; 
+  color: var(--icon-color); 
+}
+
+
+.icon.active {
+  opacity: 1;
+  color: white;
+}

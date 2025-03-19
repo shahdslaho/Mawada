@@ -1,0 +1,60 @@
+
+/*  العنوان */
+.gradientText {
+    background: linear-gradient(to left, var(--text-gradient-to), var(--text-gradient-from));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 4rem; 
+    margin: 4rem 0 1.5rem 0;
+    padding-top: 2rem;
+    font-weight: 900; 
+    text-align: center;
+    filter: drop-shadow(1px 3px 0 rgba(255, 255, 255, 0.914)); 
+}
+
+/*  الأيقونة  الدوارة */
+.loader {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin-left: 20px;
+}
+
+/* حجم الأيقونة */
+.loader svg {
+    width: 40px;
+    height: 40px;
+}
+
+/* تأثيرات الحركة للعناصر الدوارة */
+.spin {
+    animation: spinDashArray 2s ease-in-out infinite,
+              spin 8s ease-in-out infinite,
+              dashOffset 2s linear infinite;
+    transform-origin: center;
+}
+
+/* سمك خطوط الدوائر المتحركة */
+.gradient-b, .gradient-c, .gradient-d {
+    stroke-width: 4;
+}
+
+/* حركة تغيير طول الخط المتقطع */
+@keyframes spinDashArray {
+    0% { stroke-dasharray: 270 90; }
+    50% { stroke-dasharray: 0 360; }
+    100% { stroke-dasharray: 270 90; }
+}
+
+/* حركة إزاحة الخط المتقطع */
+@keyframes dashOffset {
+    0% { stroke-dashoffset: 365; }
+    100% { stroke-dashoffset: 5; }
+}
+
+/* حركة الدوران */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* الوضع الفاتح */
+:root {
+    --bg-color: #ffffff; 
+    --navbar-bg:   linear-gradient(18deg, #050040, #83007e);
+    --sidebar-bg: #ffffff; 
+    --card-bg:  linear-gradient(18deg, #050040, #83007e); 
+    --button-bg:  #050040; 
+    --button-hover-bg:  #5600506e; 
+    --text-color: #ffffff; 
+    --icon-color: #ffffff; 
+    --toggle-bg: #ffffff; 
+    --toggle-thumb: #00203f; 
+    --glow-color:  #ffffff;
+    --text-gradient-from:  #050040; 
+    --text-gradient-to:  #AA076B;
+  }
+  
+  /*  الوضع الداكن */
+  [data-theme="dark"] {
+    --bg-color: #050016; 
+    --navbar-bg:  linear-gradient(18deg, #050040, #83007e);
+    --sidebar-bg: #050016; 
+    --card-bg:  linear-gradient(18deg, #050040, #83007e); 
+    --button-bg:  #050040; 
+    --button-hover-bg: #5600506e; 
+    --text-color: #ffffff; 
+    --icon-color: #ffffff; 
+    --toggle-bg: #ffffff; 
+    --toggle-thumb: #00203f; 
+    --glow-color:  #ffffff;
+    --text-gradient-from:  #050040; 
+    --text-gradient-to:  #83007e;
+  }
+  
+  body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s;
+  }
+  
+  
+  
+  
+  

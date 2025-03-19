@@ -1,0 +1,144 @@
+/* شريط التنقل الرئيسي - ثابت في أعلى الصفحة */
+.navbar {
+  padding: 0.5rem 1.5rem;  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--navbar-bg);
+  color: var(--text-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* قسم الشعار */
+.logoSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-left: 5%;
+}
+
+/* صورة الشعار */
+.logoSection img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* تعديل حجم الشعار للشاشات الكبيرة */
+@media (min-width: 768px) {
+  .logoSection {
+    justify-content: flex-start;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* قسم البحث */
+.searchSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  max-width: 500px;
+  width: 100%;
+  position: relative; 
+}
+
+/* محاذاة البحث للشاشات الكبيرة */
+@media (min-width: 768px) {
+  .searchSection {
+    justify-content: flex-start;
+  }
+}
+
+/* زر تبديل السمة (الوضع الليلي/النهاري) */
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* محاذاة زر تبديل السمة للشاشات الكبيرة */
+@media (min-width: 768px) {
+  .themeToggle {
+    justify-content: flex-end;
+  }
+}
+
+/* زر المفضلة */
+.favoriteButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+  margin-left: 10px;
+  position: relative;
+  z-index: 1001;
+}
+
+/* نافذة المفضلة المنبثقة */
+.favoritesPopup {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* عنصر اللعبة المفضلة */
+.favoriteItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* صورة اللعبة المفضلة */
+.favoriteImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-right: 12px;
+  object-fit: cover;
+}
+
+/* نص عنصر المفضلة */
+.favoriteItem p {
+  margin: 0;
+}
+
+/* زر حذف جميع الألعاب المفضلة */
+.clearButton {
+  background-color: #ac0000; 
+  color: white; 
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px; 
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+/* تأثير التحويم على زر الحذف */
+.clearButton:hover {
+  background-color: #630000; 
+}

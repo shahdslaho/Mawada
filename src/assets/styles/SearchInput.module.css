@@ -1,0 +1,36 @@
+
+/* نموذج البحث */
+.searchForm {
+    width: 100%;
+}
+
+/* حاوية حقل البحث */
+.searchContainer {
+    position: relative;
+}
+
+/* أيقونة البحث */
+.searchIcon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding-left: 0.75rem;
+    pointer-events: none;
+    color: var(--button-bg);
+    margin-top: 10px;
+}
+
+/* حقل إدخال البحث */
+.searchInput {
+    width: 100%;
+    padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+    font-size: 0.875rem;
+    color: #3b0343;
+    border: 2px solid var(--glow-color);
+    border-radius: 10px;
+    background: var(--toggle-bg);
+    transition: 0.2s ease-in-out;
+}
+
+
+

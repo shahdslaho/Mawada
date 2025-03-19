@@ -1,0 +1,73 @@
+/* حاوية محدد المنصات */
+.container {
+  position: relative;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+/* زر اختيار المنصة */
+.button {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: 0.5px solid var(--glow-color);
+  box-shadow: 0px 0px 1px var(--glow-color), 0px 0px 5px var(--glow-color);
+  padding: 10px 16px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* تأثير التحويم على الزر */
+.button:hover {
+  box-shadow: 0px 0px 8px var(--glow-color);
+}
+
+/* أيقونة الزر */
+.icon {
+  margin-right: 10px;
+  width: 12px;
+  height: 12px;
+}
+
+/* القائمة المنسدلة */
+.dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 160px;
+  z-index: 10;
+}
+
+/* عنصر في القائمة المنسدلة */
+.item {
+  padding: 10px;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: background-color 0.3s ease;
+}
+
+/* تأثير التحويم على عنصر القائمة */
+.item:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* محاذاة مع قائمة البطاقات */
+@media (min-width: 768px) {
+  .container {
+    margin-left: calc((100% - 1400px) / 2 + 1.5rem);
+  }
+}
+
+/* تعديل الهامش للشاشات الأصغر */
+@media (max-width: 1400px) {
+  .container {
+    margin-left: 1.5rem;
+  }
+}
+  

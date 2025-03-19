@@ -1,0 +1,110 @@
+/* بطاقة اللعبة الرئيسية */
+.card {
+  width: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
+  background: linear-gradient(to right, #050040, #83007e);
+  filter: drop-shadow(0 0 10px rgba(186, 0, 237, 0.293));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* تأثير الدوران الخلفي */
+.card::before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  background-image: linear-gradient(180deg, #050040, #83007e);
+  height: 140%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+/* الطبقة الداخلية للبطاقة */
+.card::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(to right, #050040, #83007e);
+  inset: 5px;
+  border-radius: 15px;
+}
+
+/* صورة اللعبة */
+.image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+/* قسم التفاصيل */
+.details {
+  padding: 16px;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+/* الجزء العلوي من التفاصيل */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* تنسيق درجة تقييم اللعبة - يظهر بلون مميز وخط عريض لإبراز أهميته للمستخدم */
+.score {
+  font-weight: bold;
+  color: var(--highlight-color);
+}
+
+/* عنوان اللعبة */
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.title:hover {
+  color: rgb(0, 183, 255);
+}
+
+/* زر المفضلة */
+.favoriteButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.favoriteButton:hover {
+  color: red;
+}
+
+/* تأثير التحويم على البطاقة */
+.card:hover {
+  filter: drop-shadow(0 0 15px rgba(186, 0, 237, 0.4));
+  transform: scale(1.03);
+}
+
+/* تعريف حركة الدوران */
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(360deg);
+  }
+}
