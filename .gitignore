@@ -39,3 +39,5 @@ build
 # Deployment
 .vercel
 .netlify
+
+.vercel
