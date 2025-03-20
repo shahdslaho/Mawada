@@ -1,7 +1,8 @@
 // استيراد المكتبات والمكونات اللازمة
 import React from "react";
 import GenreList from "../Genres/GenreList";
-import styles from "../../assets/styles/sideBar.module.css";
+// تحديث مسار الاستيراد ليطابق اسم الملف الفعلي
+import styles from "../../assets/styles/SideBar.module.css";
 import { useApp } from "../../context/AppContext";
 
 // مكون الشريط الجانبي
